@@ -8,20 +8,11 @@ public class Algorithm2Test {
     Algorithm algorithm = new Algorithm2();
 
     @Test
-    public void testInstance1() {
+    public void testAlgorithm2() {
         AlgorithmGeneralTest.generalTest(
-                "src/main/resources/instances/instance1.txt",
+                "src/main/resources/instances",
                 algorithm,
-                60,
-                0.0);
-    }
-
-    @Test
-    public void testInstance2() {
-        AlgorithmGeneralTest.generalTest(
-                "src/main/resources/instances/instance1.txt",
-                algorithm,
-                60,
-                0.0);
+                60
+        );
     }
 }

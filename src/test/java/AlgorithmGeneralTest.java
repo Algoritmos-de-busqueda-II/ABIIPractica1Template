@@ -15,16 +15,16 @@ public class AlgorithmGeneralTest {
     private static Map<String, Double> expectedQuality = new HashMap<>();
 
     private static void fillMap(){
-        expectedQuality.put("a_1_n10_m2.txt", 0.0);
-        expectedQuality.put("a_16_n10_m6.txt", 0.0);
-        expectedQuality.put("a_19_n10_m6.txt", 0.0);
-        expectedQuality.put("a_23_n10_m8.txt", 0.0);
-        expectedQuality.put("a_27_n15_m3.txt", 0.0);
-        expectedQuality.put("a_44_n15_m9.txt", 0.0);
-        expectedQuality.put("a_49_n15_m12.txt", 0.0);
-        expectedQuality.put("a_54_n30_m6.txt", 0.0);
-        expectedQuality.put("a_71_n30_m24.txt", 0.0);
-        expectedQuality.put("a_75_n30_m24.txt", 0.0);
+        expectedQuality.put("a_1_n10_m2.txt", 243.97);
+        expectedQuality.put("a_16_n10_m6.txt", 2106.73);
+        expectedQuality.put("a_19_n10_m6.txt", 2486.85);
+        expectedQuality.put("a_23_n10_m8.txt", 2720.61);
+        expectedQuality.put("a_27_n15_m3.txt", 670.80);
+        expectedQuality.put("a_44_n15_m9.txt", 5482.75);
+        expectedQuality.put("a_49_n15_m12.txt", 7902.54);
+        expectedQuality.put("a_54_n30_m6.txt", 1781.15);
+        expectedQuality.put("a_71_n30_m24.txt", 33781.05);
+        expectedQuality.put("a_75_n30_m24.txt", 15778.52);
     }
 
     public static void generalTest(String instancePath, Algorithm algorithm, long maxTimePerInstance) {

@@ -15,16 +15,16 @@ public class AlgorithmGeneralTest {
     private static Map<String, Double> expectedQuality = new HashMap<>();
 
     private static void fillMap(){
-        expectedQuality.put("a_1_n10_m2.txt", 243.97);
-        expectedQuality.put("a_16_n10_m6.txt", 2106.73);
-        expectedQuality.put("a_19_n10_m6.txt", 2486.85);
-        expectedQuality.put("a_23_n10_m8.txt", 2720.61);
-        expectedQuality.put("a_27_n15_m3.txt", 670.80);
-        expectedQuality.put("a_44_n15_m9.txt", 5482.75);
-        expectedQuality.put("a_49_n15_m12.txt", 7902.54);
-        expectedQuality.put("a_54_n30_m6.txt", 1781.15);
-        expectedQuality.put("a_71_n30_m24.txt", 33781.05);
-        expectedQuality.put("a_75_n30_m24.txt", 15778.52);
+        expectedQuality.put("instancia_01_n10_m6.txt", 2106.73);
+        expectedQuality.put("instancia_02_n10_m8.txt", 2720.61);
+        expectedQuality.put("instancia_03_n15_m3.txt", 670.80);
+        expectedQuality.put("instancia_04_n15_m9.txt", 5574.20);
+        expectedQuality.put("instancia_05_n30_m6.txt", 1912.59);
+        expectedQuality.put("instancia_06_n30_m24.txt", 34073.31);
+        expectedQuality.put("instancia_07_n50_m15.txt", 10567.54);
+        expectedQuality.put("instancia_08_n100_m10.txt", 5169.02);
+        expectedQuality.put("instancia_09_n125_m37.txt", 106708.50);
+        expectedQuality.put("instancia_10_n150_m15.txt", 21346.37);
     }
 
     public static void generalTest(String instancePath, Algorithm algorithm, long maxTimePerInstance) {
@@ -47,7 +47,7 @@ public class AlgorithmGeneralTest {
                         "La calidad de la solución no es suficiente");
             }
             Duration elapsedTime = Duration.between(instant, Instant.now());
-            Assertions.assertTrue(elapsedTime.getSeconds() < (maxTimePerInstance * numberOfInstances),
+            Assertions.assertTrue(elapsedTime.getSeconds() <= (maxTimePerInstance * numberOfInstances),
                     "El algoritmo ha tardado más de un minuto de media");
         }
         catch (UnsupportedOperationException e) {

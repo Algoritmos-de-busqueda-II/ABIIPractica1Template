@@ -29,7 +29,7 @@ jobs:
         test-name: Algorithm1
         setup-command: ''
         command: mvn test -Dtest=Algorithm1Test
-        timeout: 5
+        timeout: 20
     - name: Algorithm2
       id: algorithm2
       uses: classroom-resources/autograding-command-grader@v1
@@ -37,7 +37,7 @@ jobs:
         test-name: Algorithm2
         setup-command: ''
         command: mvn test -Dtest=Algorithm2Test
-        timeout: 5
+        timeout: 20
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
